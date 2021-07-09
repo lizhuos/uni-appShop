@@ -1,6 +1,9 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/member/member",
+    "pages/news/news"
   ],
   "subPackages": [],
   "window": {
@@ -8,6 +11,36 @@
     "navigationBarTitleText": "移动商城",
     "navigationBarBackgroundColor": "#b50e03",
     "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "selectedColor": "#b50e03",
+    "color": "#C0C0C0",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabbar/homeN.png",
+        "selectedIconPath": "static/tabbar/homeS.png"
+      },
+      {
+        "text": "咨询",
+        "pagePath": "pages/news/news",
+        "iconPath": "static/tabbar/couponN.png",
+        "selectedIconPath": "static/tabbar/couponS.png"
+      },
+      {
+        "text": "购物车",
+        "pagePath": "pages/cart/cart",
+        "iconPath": "static/tabbar/allgoodsN.png",
+        "selectedIconPath": "static/tabbar/allgoodsS.png"
+      },
+      {
+        "text": "会员",
+        "pagePath": "pages/member/member",
+        "iconPath": "static/tabbar/personN.png",
+        "selectedIconPath": "static/tabbar/personS.png"
+      }
+    ]
   },
   "usingComponents": {}
 }

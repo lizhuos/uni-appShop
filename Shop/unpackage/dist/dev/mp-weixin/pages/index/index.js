@@ -133,7 +133,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -142,14 +142,24 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 var _default =
 {
   data: function data() {
-    return {};
-
+    return {
+      swipers: [] };
 
   },
   onLoad: function onLoad() {
-
+    this.getSwipers();
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    // 获取轮播图数据
+    getSwipers: function getSwipers() {
+      uni.request({
+        url: "https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata",
+        success: function success(res) {
+          console.log(res);
+        } });
+
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 ],[[11,"common/runtime","common/vendor"]]]);
